@@ -1,12 +1,12 @@
 import { AccountModel } from '@/domain/models'
 
-export type AddAcountParams = {
+export type AddAccountParams = {
   name: string
   email: string
   password: string
   passwordConfirmation: string
 }
 
-export interface AddAcount {
-  add: (params: AddAcountParams) => Promise<AccountModel>
+export interface AddAccount {
+  add: (params: AddAccountParams) => Promise<AccountModel>
 }

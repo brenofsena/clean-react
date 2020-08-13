@@ -1,11 +1,11 @@
-import { LocalStorageAdapater } from './local-storage-adapter'
+import { LocalStorageAdapter } from './local-storage-adapter'
 import faker from 'faker'
 import 'jest-localstorage-mock'
 import { AccountModel } from '@/domain/models'
 
-const makeSut = (): LocalStorageAdapater => new LocalStorageAdapater()
+const makeSut = (): LocalStorageAdapter => new LocalStorageAdapter()
 
-describe('LocalStorageAdapater', () => {
+describe('LocalStorageAdapter', () => {
   beforeEach(() => {
     localStorage.clear()
   })

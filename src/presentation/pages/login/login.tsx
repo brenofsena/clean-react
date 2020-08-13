@@ -4,15 +4,15 @@ import { LoginHeader, Footer, Input, FormStatus, SubmitButton } from '@/presenta
 import Context from '@/presentation/contexts/form/form-context'
 import Styles from './login-styles.scss'
 import { Validation } from '@/presentation/protocols/validation'
-import { Authentication, SaveAccessToken } from '@/domain/useCases'
+import { Authentication, UpdateCurrentAccount } from '@/domain/useCases'
 
 type Props = {
   validation: Validation
   authentication: Authentication
-  saveAccessToken: SaveAccessToken
+  updateCurrentAccount: UpdateCurrentAccount
 }
 
-const Login: React.FC<Props> = ({ validation, authentication, saveAccessToken }: Props) => {
+const Login: React.FC<Props> = ({ validation, authentication, updateCurrentAccount }: Props) => {
   const history = useHistory()
 
   const [state, setState] = useState({
@@ -52,7 +52,7 @@ const Login: React.FC<Props> = ({ validation, authentication, saveAccessToken }:
         password: state.password
       })
 
-      await saveAccessToken.save(account.accessToken)
+      await updateCurrentAccount.save(account)
       history.replace('/')
     } catch (error) {
       setState({

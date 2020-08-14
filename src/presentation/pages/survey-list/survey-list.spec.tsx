@@ -1,23 +1,12 @@
 import React from 'react'
 import { render, screen, waitFor, fireEvent } from '@testing-library/react'
 import { SurveyList } from '@/presentation/pages'
-import { LoadSurveyList } from '@/domain/useCases'
-import { mockSurveyListModel, mockAccountModel } from '@/domain/test'
+import { mockAccountModel, LoadSurveyListSpy } from '@/domain/test'
 import { UnexpectedError, AccessDeniedError } from '@/domain/errors'
 import { ApiContext } from '@/presentation/contexts'
 import { Router } from 'react-router-dom'
 import { createMemoryHistory, MemoryHistory } from 'history'
 import { AccountModel } from '@/domain/models'
-
-class LoadSurveyListSpy implements LoadSurveyList {
-  callsCount = 0
-  surveys = mockSurveyListModel()
-
-  async loadAll (): Promise<LoadSurveyList.Model[]> {
-    this.callsCount++
-    return this.surveys
-  }
-}
 
 type SutTypes = {
   loadSurveyListSpy: LoadSurveyListSpy

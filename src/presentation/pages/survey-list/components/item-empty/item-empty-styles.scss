@@ -1,8 +1,9 @@
 @import "../../../../styles/colors.scss";
+@import "../../../../styles/animations.scss";
 
 .surveyItemEmpty {
   height: 250px;
-  background: $white;
+  background-color: $white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -18,7 +19,6 @@
     linear-gradient(to right, $disabledColor, $disabledColor),
     linear-gradient(to right, $disabledColor, $disabledColor),
     linear-gradient(to right, $disabledColor, $disabledColor);
-
   background-position: 24px 55px, left 0 bottom 0, 108px 77px, 108px 97px,
     108px 117px;
   background-size: 60px 100px, 100% 40px, 140px 16px, 120px 16px, 160px 16px;
@@ -37,18 +37,12 @@
       rgba($white, 0.2),
       transparent
     );
-    animation: shimmer 1s infinite;
+    animation: shimmer 1.2s infinite;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .surveyItemWrap {
+  .surveyItemEmpty {
     flex-basis: 100%;
-  }
-}
-
-@keyframes shimmer {
-  100% {
-    transform: translateX(100%);
   }
 }

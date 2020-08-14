@@ -1,8 +1,8 @@
-import { HttpResponse } from './http-response'
+import { HttpResponse } from '@/data/protocols/http'
 
 export type HttpGetParams = {
   url: string
-  body?: any
+  headers?: any
 }
 
 export interface HttpGetClient<R = any> {

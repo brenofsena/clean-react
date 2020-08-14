@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/brenofsena/clean-react.svg?branch=master)](https://travis-ci.org/brenofsena/clean-react)
 [![Coverage Status](https://coveralls.io/repos/github/brenofsena/clean-react/badge.svg?branch=master)](https://coveralls.io/github/brenofsena/clean-react?branch=master)
+[![Known Vulnerabilities](https://snyk.io/test/github/brenofsena/clean-react/badge.svg)](https://snyk.io/test/github/brenofsena/clean-react)
 
 # **4Dev React - Enquetes para Programadores**
 
